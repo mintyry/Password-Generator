@@ -10,6 +10,8 @@ var spset = ['!', '?', '$', '#', '&', '*', '@', '#', '(', ')']
 
 var password=""
 
+var allset=[]
+console.log(allset.concat(uppset))
 //var char = "0123456789abcdefghijklmnopqrstuvwxyz!@#$%^&*()ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 //var passwordLength = 12;
 
@@ -23,18 +25,37 @@ function generatePassword() {
 
   console.log (uppercase)
 
-  if (uppercase&&lowercase&&numbers&&spchar) {
+  /*if (uppercase&&lowercase&&numbers&&spchar) {
     var allset = [...uppset, ...lowset, ...numset, ...spset]
     console.log(allset)
    
 
+  }*/
+
+  if (uppercase) {
+   allset=allset.concat(uppset)
+    console.log(allset)
+  }
+  if (lowercase) {
+   allset=allset.concat(lowset)
+    console.log(allset)
+  }
+  if (numbers) {
+   allset=allset.concat(numset)
+    console.log(allset)
+  }
+  if (spchar) {
+    allset=allset.concat(spset)
+    console.log(allset)
   }
 
   for (let i=0; i < passwordLength; i++) {
     password += allset[Math.floor(Math.random() * allset.length)];
-      
+    console.log(typeof password)  
     console.log(password)
     }
+
+    
 
   return password;
 }
@@ -50,4 +71,4 @@ function writePassword() {
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
-z
+
