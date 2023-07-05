@@ -12,25 +12,38 @@ var password=""
 
 var allset=[]
 console.log(allset.concat(uppset))
-//var char = "0123456789abcdefghijklmnopqrstuvwxyz!@#$%^&*()ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-//var passwordLength = 12;
 
 
 function generatePassword() {
   var uppercase = confirm("Do you want uppercase letters in your password?");
-  var lowercase = confirm("Do you want lowercase letters in your password?")//true or false
+  var lowercase = confirm("Do you want lowercase letters in your password?")
   var numbers = confirm ("Do you want numbers in your password?")
   var spchar = confirm ("Do you want special characters in your password?")
-  var passwordLength = prompt("Please enter a value between 8 and 128 for how many characters you would like your password to contain.")
-
-  console.log (uppercase)
-
-  /*if (uppercase&&lowercase&&numbers&&spchar) {
-    var allset = [...uppset, ...lowset, ...numset, ...spset]
-    console.log(allset)
-   
-
+  if (uppercase + lowercase + numbers + spchar === 0) {
+    alert("Do you even want to make a password? \n Please select at least one criteria for your password.");
+    return null;
+  }
+  var passwordLength = prompt("How long would you like your password to be? \n Password must be at least 8 characters and no more than 128.")
+  /*if (passwordLength < 8 || passwordLength >128) {
+    prompt("Do you want to try that again? \n Please enter in a value between 8 and 128.");
+    return;
+  }
+  else if (isNaN(passwordLength)) {
+    prompt("I'm gonna need a number, buddy.");
+    return;
   }*/
+
+  do {
+    passwordLength = prompt("Practice makes perfect -- let's try again. \n Please enter in a number of at least 8 and no more than 128.");
+  } while (passwordLength <= 8 || passwordLength >= 128 || isNaN(passwordLength));
+
+
+
+  console.log(uppercase)
+  console.log(lowercase)
+  console.log(numbers)
+  console.log(spchar)
+  console.log(passwordLength)
 
   if (uppercase) {
    allset=allset.concat(uppset)
@@ -53,7 +66,7 @@ function generatePassword() {
     password += allset[Math.floor(Math.random() * allset.length)];
     console.log(typeof password)  
     console.log(password)
-    }
+  }
 
     
 
@@ -71,4 +84,3 @@ function writePassword() {
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
-
