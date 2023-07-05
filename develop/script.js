@@ -1,4 +1,6 @@
 // Assignment Code
+//leaving console.log codes in, because i found it helpful to test while writing up this code
+
 var generateBtn = document.querySelector("#generate");
 
 var uppset = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L',
@@ -24,6 +26,10 @@ function generatePassword() {
     return null;
   }
   var passwordLength = prompt("How long would you like your password to be? \n Password must be at least 8 characters and no more than 128.")
+
+  while (passwordLength < 8 || passwordLength > 128 || isNaN(passwordLength)) {
+    passwordLength = prompt("Practice makes perfect -- let's try again. \n Please enter in a number of at least 8 and no more than 128.");
+  }
   /*if (passwordLength < 8 || passwordLength >128) {
     prompt("Do you want to try that again? \n Please enter in a value between 8 and 128.");
     return;
@@ -32,12 +38,6 @@ function generatePassword() {
     prompt("I'm gonna need a number, buddy.");
     return;
   }*/
-
-  do {
-    passwordLength = prompt("Practice makes perfect -- let's try again. \n Please enter in a number of at least 8 and no more than 128.");
-  } while (passwordLength <= 8 || passwordLength >= 128 || isNaN(passwordLength));
-
-
 
   console.log(uppercase)
   console.log(lowercase)
@@ -67,8 +67,6 @@ function generatePassword() {
     console.log(typeof password)  
     console.log(password)
   }
-
-    
 
   return password;
 }
