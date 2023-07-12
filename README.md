@@ -17,14 +17,14 @@ N/A
 
 Upon landing on the page, when the user clicks "Generate Password," they wlll be presented with messages to confirm which criteria they would prefer to have included in their generated password: uppercase letters, then lowercase letters, then numbers, then special characters. They may click "OK" to include or "cancel" to exclude.
 
-Please see the following screenshots to see user's POV:
+Please see the following screenshots to see the user's POV:
 
 ![Uppercase letters?](assets/upp.png)
 ![Lowercase letters?](assets/low.png)
 ![Numbers?](assets/num.png)
 ![Special Characters?](assets/spec.png)
 
-If the user is being difficult, they will be alert that they have to choose at least one criteria for the password generator, because otherwise, no password can be created!
+If the user is being difficult, they will be alerted that they have to choose at least one criteria for the password generator, because otherwise, no password can be created!
 
 ![Didn't select any criteria](assets/noselect.png)
 
