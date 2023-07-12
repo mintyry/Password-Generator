@@ -30,14 +30,6 @@ function generatePassword() {
   while (passwordLength < 8 || passwordLength > 128 || isNaN(passwordLength)) {
     passwordLength = prompt("Practice makes perfect -- let's try again. \n Please enter in a number of at least 8 and no more than 128.");
   }
-  /*if (passwordLength < 8 || passwordLength >128) {
-    prompt("Do you want to try that again? \n Please enter in a value between 8 and 128.");
-    return;
-  }
-  else if (isNaN(passwordLength)) {
-    prompt("I'm gonna need a number, buddy.");
-    return;
-  }*/
 
   console.log(uppercase)
   console.log(lowercase)
