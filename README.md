@@ -44,6 +44,6 @@ Once they enter a valid number, their password will be generated!
 
 Starter code was provided by edX.
 
-## Projefct Repository
+## Project Repository
 
 Please enjoy the deployed application [here](url)!
